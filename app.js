@@ -1,4 +1,4 @@
-require('node-jsx').install({ harmony: true });
+require('node-jsx').install({ harmony: true }); 
 
 var fs = require('fs');
 var express = require('express');
@@ -11,7 +11,9 @@ require('./config/express')(app);
 
 // Bootstrap models
 fs.readdirSync(__dirname + '/models').forEach(function (file) {
-  if (~file.substr(-3) === '.js') { require(__dirname + '/models/' + file); }
+  'use strict';
+
+  if (file.substr(-3) === '.js') { require(__dirname + '/models/' + file); }
 });
 
 // Bootstrap routes

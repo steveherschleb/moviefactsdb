@@ -5,6 +5,7 @@ var directors = require('../controllers/directors');
 
 
 module.exports = function (app) {
+  'use strict';
   
   //pages routes
   app.get('/', pages.home);
@@ -28,7 +29,7 @@ module.exports = function (app) {
   app.use(pages.notFound);
 
   //error handler
-  app.use(function(err, req, res, next) {
+  app.use(function(err, req, res) {
     res.status(err.status || 500);
     res.send(err.stack);
   });

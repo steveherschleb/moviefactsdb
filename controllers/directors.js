@@ -9,12 +9,14 @@ var NotFoundPage = React.createFactory(require('../components/404Page.jsx'));
  ** Load director
  **/
 exports.load = function (req, res, next, id) {
+  'use strict';
+
   new Director({ id: id })
   .fetch({ withRelated: ['movies'] })
   .then(function (model) {
     if (!model) {
       res.status(404);
-      return res.send(React.renderToString(NotFoundPage()));
+      return res.send(React.renderToString(new NotFoundPage()));
     }
     
     req.director = model;
@@ -29,9 +31,11 @@ exports.load = function (req, res, next, id) {
  ** List director
  **/
 exports.index = function (req, res, next) {
+  'use strict';
+  
   new Director().fetchAll()
   .then(function(directors) {
-    res.send(React.renderToString(DirectorsPage({ directors: directors.toJSON() })));
+    res.send(React.renderToString(new DirectorsPage({ directors: directors.toJSON() })));
   }).catch(function(err) {
     next(err);
   }); 
@@ -41,6 +45,8 @@ exports.index = function (req, res, next) {
 /**
  ** Show director
  **/
-exports.show = function (req, res, next) {
-  res.send(React.renderToString(DirectorPage({ director: req.director.toJSON() })));
+exports.show = function (req, res) {
+  'use strict';
+  
+  res.send(React.renderToString(new DirectorPage({ director: req.director.toJSON() })));
 };

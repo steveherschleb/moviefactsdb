@@ -1,0 +1,91 @@
+.descriptor {
+  font-weight: bold;
+  text-transform: uppercase;
+
+  span.value {
+    font-weight:initial;
+    text-transform: none;
+  }
+}
+
+
+table {
+  font-size:15px;
+  line-height:21px;
+
+  a {
+    text-decoration: initial !important;
+    
+    &:hover { 
+      text-decoration: underline !important;
+    }
+  }
+
+  tr td,
+  tr th {
+    text-align:center;
+  
+    &:first-child {
+      text-align:left;
+    }
+  }
+  
+
+}
+
+
+.jumbotron {
+  text-align:center;
+}
+
+
+.icon {
+  &-movie {
+    background: url('/img/icons.jpg') no-repeat -336px -168px;
+    width: 128px;
+    height: 144px;
+  }
+  
+  &-actor {
+    background: url('/img/icons.jpg') no-repeat -472px -168px;
+    width: 125px;
+    height: 144px;
+  }
+  
+  &-director {
+    background: url('/img/icons.jpg') no-repeat -19px -344px;
+    width: 133px;
+    height: 144px;
+  }
+}
+
+
+#features {
+  text-align:center;
+  
+  .img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  h2 a {
+    color: #2c3e50;
+  }
+}
+
+
+.navbar {
+  margin-bottom:0px !important;
+}
+
+
+#notFound {
+  text-align:center;
+  margin-top:40px;
+  
+  h1 {
+    font-size:900%;
+  }
+}
+

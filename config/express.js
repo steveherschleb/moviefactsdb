@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 
 
 module.exports = function (app) {
+  'use strict';
+
   //app.use(favicon(__dirname + '/public/favicon.ico'));
   app.use(logger('dev'));
   app.use(bodyParser.json());

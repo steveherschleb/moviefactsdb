@@ -1,4 +1,6 @@
 exports.up = function (knex) {
+  'use strict';
+  
   return knex.schema.
     createTable('movies', function (table) {
       table.increments('id').primary();
@@ -28,6 +30,8 @@ exports.up = function (knex) {
   };
 
 exports.down = function (knex) {
+  'use strict';
+  
   return knex.schema.
     dropTable('movies').
     dropTable('actors').
