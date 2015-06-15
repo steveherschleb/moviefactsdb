@@ -43,13 +43,13 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-          { expand: true, src: ['public/css/*.min.css', 'public/js/**', 'public/img/**'], dest: 'build', filter: 'isFile' },
+          { expand: true, cwd: 'public', src: ['css/*.min.css', 'js/**', 'img/**'], dest: 'public/build', filter: 'isFile' },
         ],
       },
     },
 
 
-    clean: ['build/public/css', 'build/public/js', 'build/public/img'],
+    clean: ['public/build'],
   });
 
   
