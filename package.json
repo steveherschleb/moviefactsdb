@@ -1,11 +1,25 @@
 {
   "name": "moviefactdb",
   "version": "1.0.0",
+  "description": "A demo Node.js application.",
   "private": true,
   "scripts": {
     "start": "NODE_ENV=development supervisor -w public,models,controllers,components,config,app.js -e js,jade,css,jsx ./bin/www",
     "test": "./node_modules/jasmine/bin/jasmine.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steveherschleb/moviefactsdb.git"
+  },
+  "author": "Steve Herschleb <steve.herschleb@gmail.com>",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/steveherschleb/moviefactsdb/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/steveherschleb/moviefactsdb/issues"
+  },
+  "homepage": "https://github.com/steveherschleb/moviefactsdb",
   "dependencies": {
     "body-parser": "~1.12.4",
     "bookshelf": "^0.8.1",
