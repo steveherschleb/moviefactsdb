@@ -1,10 +1,4 @@
-var knex = require('knex')({
-  client: 'sqlite3',
-  connection: {
-    filename: './db.sqlite'
-  },
-  debug: false
-});
+var knex = require('knex')(require('../knexfile'));
 
 var Bookshelf = require('bookshelf')(knex);
 Bookshelf.plugin('registry');
