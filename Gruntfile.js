@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         jshintrc: true
       },
 
-      build: ['Gruntfile.js', 'models/*.js', 'controllers/*.js', 'config/*.js', 'migrations/*.js', 'seeds/*.js', 'knexfile.js', 'app.js']
+      build: ['Gruntfile.js', 'models/*.js', 'controllers/*.js', 'config/*.js', 'spec/*.js', 'migrations/*.js', 'seeds/*.js', 'knexfile.js', 'app.js']
     },
 
 
@@ -26,6 +26,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
 
     cssmin: {
       options: {
@@ -48,9 +49,12 @@ module.exports = function(grunt) {
     },
 
 
-    clean: ['build/public/css', 'build/public/js', 'build/public/img']
+    clean: ['build/public/css', 'build/public/js', 'build/public/img'],
   });
 
+  
+  grunt.registerTask('default', ['jshint', 'sass', 'cssmin', 'clean', 'copy']); 
+  
   //plugins 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
