@@ -1,6 +1,6 @@
 # MovieFactsDB 
 
-The best source on the Internet for a tiny amount of movie-related facts.
+"The best source on the Internet for a tiny amount of movie-related facts."
 
 
 ## Overview
@@ -8,13 +8,12 @@ The best source on the Internet for a tiny amount of movie-related facts.
 This is a demo Node.js app. It's a small project that let's you interact with static movie related data.
 
 
-## Technologies
-
 This demo app uses a number of different technologies:
 
 * Knex - a general purpose SQL builder.
 * Bookshelf - a Promise-based ORM for Node.
 * React - composable UI components.
+* SQLite3 - a tinySQL database. 
 
 
 ## Build
