@@ -1,5 +1,4 @@
-var isNode = typeof module !== 'undefined' && module.exports;
-var React = isNode ? require('react/addons') : window.React;
+var React = require('react/addons');
 
 
 var Component = React.createClass({
@@ -21,6 +20,4 @@ var Component = React.createClass({
 });
 
 
-if (isNode) {
-  module.exports = Component;
-}
+module.exports = Component;
